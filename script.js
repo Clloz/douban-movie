@@ -200,12 +200,14 @@ var search = (function ($) {
     //绑定事件
     var bind = function () {
         $btn.on('click', function () {
+            $content.empty()
             $loading.show()
             isLoading = true;
             getData(render)
         })
         $input.on('keyup', function (e) {
             if (e.key === 'Enter') {
+                $content.empty()
                 $loading.show()
                 isLoading = true;
                 getData(render)
